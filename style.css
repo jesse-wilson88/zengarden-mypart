@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Inika&family=Inter:wght@300&family=Lora&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+body {
+  margin: 0;
+}
+body * {
+  font-size: 17px;
+  line-height: 130%;
+  font-weight: 400;
+  font-style: normal;
+  padding: 0 5px;
+}
+
+/********************
+ * Page Container
+ *******************/
+.page-wrapper {
+  max-width: 100%;
+  /********************
+   * Benefit Section
+   *******************/
+  /********************
+   * Requirements Section
+   *******************/
+}
+.page-wrapper h1,
+.page-wrapper h2,
+.page-wrapper h3,
+.page-wrapper p {
+  margin: 0;
+}
+.page-wrapper h3 {
+  font-family: "Inika", serif;
+  font-size: 48px;
+}
+.page-wrapper .benefits,
+.page-wrapper .requirements {
+  padding: 5px;
+}
+.page-wrapper .benefits {
+  background: #F3BE03;
+  color: #2B2B2B;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 32.82051%;
+}
+.page-wrapper .benefits p {
+  margin: 0;
+  background: #F3BE03;
+}
+.page-wrapper .benefits::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  right: -33.6%;
+  bottom: -136px;
+  width: 100%;
+  padding-top: 32.82051%;
+  background-image: url("./images/benefits_bg.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: rotate(90deg);
+}
+.page-wrapper .benefits::after {
+  right: 3.5%;
+  background-image: url("./images/leaf_1.svg");
+  content: "";
+  position: absolute;
+  z-index: 2;
+  bottom: 2.265%;
+  width: 25.64103%;
+  padding-top: 25.64103%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: rotating 12s 1s linear infinite;
+}
+.page-wrapper .requirements {
+  background: #1A1831;
+  color: #FFFFFF;
+}
+
+a:link {
+  color: #DB7906;
+  text-decoration: none;
+}
+a:visited {
+  color: #F3BE03;
+}
+a:hover {
+  border-bottom: 1px solid #B46100;
+}
+a:active {
+  color: #20615B;
+}
+
+@media only screen and (min-width: 420px) {
+  .body * {
+    padding: 0 5px;
+  }
+  .page-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr;
+    max-width: 100%;
+    max-width: 1200px;
+  }
+  .page-wrapper .benefits {
+    padding-left: 150px;
+  }
+  .page-wrapper .benefits::before {
+    bottom: -114px;
+  }
+  .page-wrapper .requirements {
+    position: relative;
+    -moz-column-count: 3;
+         column-count: 3;
+    padding-right: 150px;
+  }
+  .page-wrapper .requirements::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0.5em;
+    z-index: -1;
+  }
+  .page-wrapper .requirements h3 {
+    -moz-column-span: all;
+         column-span: all;
+  }
+  .page-wrapper .requirements p {
+    padding: 5px;
+  }
+}/*# sourceMappingURL=style.css.map */
